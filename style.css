@@ -4,3 +4,64 @@
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/*just for now*/
+.slideshow-img_1 {
+  max-width: 100%;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(255, 255, 255, 0.306); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  width: 80%;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 2rem;
+  border: 1px solid #888;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 0.4rem;
+}
+
+/* Text Inside Modal */
+#modal-text {
+  padding: 1rem;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  align-self: flex-end;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding-right: 1rem;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/*desktop version*/
+@media screen and (min-width: 600px){
+  * {
+    background-color: #000;
+  }
+}
