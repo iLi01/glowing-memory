@@ -18,8 +18,35 @@
 
 #main-nav.open {
   display: flex;
-  width: 100%;
+}
 
+#main-nav.open > #menu-list {
+  padding-top: 15svh;
+}
+
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 0 0 1rem 1rem;
+  background-color: #ffffff;
+  z-index: 10000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+#nav-expand-button {
+  position: absolute;
+  right: 1rem;
+  top: 0.4rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#nav-bar li {
+  display: grid;
 }
 
 .visually-hidden {
@@ -139,11 +166,19 @@
 /*desktop version*/
 @media screen and (min-width: 600px){
   * {
-    background-color: #afafaf;
+    background-color: #bfbebe;
   }
 
   #main-nav {
     display: inline-block;
+  }
+
+  .logo-img {
+    background-color: transparent;
+  }
+
+  #logo {
+    background-color: transparent;
   }
 
   #nav-expand-button {
@@ -153,6 +188,7 @@
   .hero-slideshow, .hero-slideshow img {
     height: 85vh;
   }
+
 }
 
 
