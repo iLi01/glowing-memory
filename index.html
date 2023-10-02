@@ -15,15 +15,18 @@
         </div>
       <div>
 
-      <div class="nav-toggle">
-        <svg id="menu-btn" viewBox="0 0 100 80" width="30" height="30">
-          <rect width="60" height="13" rx="10"></rect>
-          <rect y="30" width="60" height="13" rx="10"></rect>
-          <rect y="60" width="60" height="13" rx="10"></rect>
-        </svg>
+      <div class="header-wrapper">
+        <button id="nav-expand-button">
+          <span class="visually-hidden">Menu</span>
+            <svg id="menu-icon" viewBox="0 0 100 80" width="30" height="30">
+              <rect width="60" height="13" rx="10"></rect>
+              <rect y="30" width="60" height="13" rx="10"></rect>
+              <rect y="60" width="60" height="13" rx="10"></rect>
+            </svg>
+        </button>
       </div>  
       
-    <nav>
+    <nav id="main-nav" aria-roledescription="Burger menu" aria-expanded="false">
         <ul id="menu-list">
           <li><a href="">Contact</a></li>
           <li><a href="">Gallery</a></li>

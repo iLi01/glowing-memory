@@ -12,33 +12,22 @@
   padding-top: 0.2rem;
 }
 
+#main-nav {
+  display: none;
+}
 
-#nav-bar {
-  position: absolute;
-  z-index: 1000;
+#main-nav.open {
   display: flex;
-  justify-content: space-between;
   width: 100%;
-  background-color: #ffffff;
-  border-radius: 0 0 1rem 1rem;
+
 }
 
-nav {
+.visually-hidden {
   height: 0;
-  width: 100%;
+  width: 0;
   overflow: hidden;
-}
-
-.open {
-  height: 100%;
-  margin-top: 3rem;
-}
-
-.nav-toggle {
-  display: block;
-  position: absolute;
-  top: 0.8rem;
-  right: 0.4rem;
+  font-size: 0;
+  display: none;
 }
 
 /* The Modal (background) */
@@ -153,26 +142,11 @@ nav {
     background-color: #afafaf;
   }
 
-  nav {
-    height: auto;
-    overflow: visible;
-  }
-
-  #nav-bar {
-    position: absolute;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    background-color: #ffffff;
-    border-radius: 0 0 1rem 1rem;
-  }
-
-  li {
+  #main-nav {
     display: inline-block;
   }
 
-  .nav-toggle {
+  #nav-expand-button {
     display: none;
   }
 
