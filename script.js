@@ -1,3 +1,4 @@
+// modal pop-out
 // Get the modal
 const modal = document.getElementById("my-modal");
 
@@ -24,7 +25,7 @@ window.onclick = function(event) {
   }
 }
 
-
+// slideshow hero-img
 let index = 0;
 
 displayImages();
@@ -43,3 +44,16 @@ function displayImages() {
 
   setTimeout(displayImages, 4000); // Change image every 3.7 seconds
 }
+
+// nav-bar
+const navExpandBtn = document.querySelector("#svg-btn");
+
+const nav = document.getElementById("nav-bar")
+
+function handleClick() {
+  nav.classList.toggle("open");
+  nav.ariaExpanded = nav.ariaExpanded === "true" ? "false" : "true";
+}
+
+consteventType = () => {return "click";};
+nav.navExpandBtn.addEventListener (eventType(), handleClick);
