@@ -46,14 +46,13 @@ function displayImages() {
 }
 
 // nav-bar
-const navExpandBtn = document.querySelector("#svg-btn");
+const navToggle = document.querySelector("#menu-btn");
+const nav = document.querySelector("nav");
 
-const nav = document.getElementById("nav-bar")
-
-function handleClick() {
-  nav.classList.toggle("open");
-  nav.ariaExpanded = nav.ariaExpanded === "true" ? "false" : "true";
+navToggle.addEventListener("click", () => {
+  nav.classList.toggle("open")
 }
+)
 
-consteventType = () => {return "click";};
-nav.navExpandBtn.addEventListener (eventType(), handleClick);
+
+

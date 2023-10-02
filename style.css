@@ -8,6 +8,37 @@
 /* logo img */
 #logo {
   width: 5.5rem;
+  padding-left: 0.4rem; 
+  padding-top: 0.2rem;
+}
+
+
+#nav-bar {
+  position: absolute;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 0 0 1rem 1rem;
+}
+
+nav {
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.open {
+  height: 100%;
+  margin-top: 3rem;
+}
+
+.nav-toggle {
+  display: block;
+  position: absolute;
+  top: 0.8rem;
+  right: 0.4rem;
 }
 
 /* The Modal (background) */
@@ -120,6 +151,33 @@
 @media screen and (min-width: 600px){
   * {
     background-color: #afafaf;
+  }
+
+  nav {
+    height: auto;
+    overflow: visible;
+  }
+
+  #nav-bar {
+    position: absolute;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .hero-slideshow, .hero-slideshow img {
+    height: 85vh;
   }
 }
 
