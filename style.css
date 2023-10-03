@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: transparent;
 }
 
 /* logo img */
@@ -12,43 +13,60 @@
   padding-top: 0.2rem;
 }
 
+/*mobile first*/
 #main-nav {
   display: none;
 }
 
+/* opened nav bar class toggle js */
 #main-nav.open {
   display: flex;
+  padding-top: 12svh;
 }
 
-#main-nav.open > #menu-list {
-  padding-top: 15svh;
-}
-
+/* the actual bar */
 #nav-bar {
   display: flex;
   justify-content: space-between;
   border-radius: 0 0 1rem 1rem;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   z-index: 10000;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
+/* burger menu icon */
 #nav-expand-button {
   position: absolute;
   right: 1rem;
-  top: 0.4rem;
+  top: 0.75rem;
   border: none;
   background-color: transparent;
   cursor: pointer;
 }
 
-#nav-bar li {
-  display: grid;
+/* ul elements of menu */
+#nav-bar ul {
+  display: flex;
+  justify-content: center;
+  flex-flow: column nowrap;
+  list-style: none;
+  text-align: end;
+  gap: 1rem;
+  margin-right: 1.5rem;
+  margin-bottom: 1rem;
 }
 
+#nav-bar ul a {
+  text-decoration: none;
+}
+
+/* screen-reading menu */
 .visually-hidden {
   height: 0;
   width: 0;
@@ -162,22 +180,38 @@
   }
 }
 
+#upcoming-events-section {
+  background-color: rgb(201, 255, 255);
+  padding: 45svh;
+}
 
 /*desktop version*/
 @media screen and (min-width: 600px){
   * {
-    background-color: #bfbebe;
+    background-color: transparent;
+  }
+
+  #nav-bar {
+    width: 80%;
+    left: 10%;
+    right: 10%;
+    padding: 0.6rem;
+  }
+
+  #nav-bar ul {
+    flex-flow: row nowrap;
+    list-style: none;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: 1rem;
+  }
+
+  li, a, ul, .menu-text, .logo-img, #logo {
+    background-color: transparent;
   }
 
   #main-nav {
     display: inline-block;
-  }
-
-  .logo-img {
-    background-color: transparent;
-  }
-
-  #logo {
     background-color: transparent;
   }
 
@@ -186,7 +220,7 @@
   }
 
   .hero-slideshow, .hero-slideshow img {
-    height: 85vh;
+    height: 102vh;
   }
 
 }
