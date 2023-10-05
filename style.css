@@ -4,6 +4,7 @@
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: transparent;
+  scroll-behavior: smooth;
 }
 
 /* logo img */
@@ -21,7 +22,7 @@
 /* opened nav bar class toggle js */
 #main-nav.open {
   display: flex;
-  padding-top: 12svh;
+  padding-top: 13svh;
 }
 
 /* the actual bar */
@@ -127,7 +128,7 @@
 /*slideshow container*/
 .hero-section {
   padding: unset !important;
-  max-width: 100%;
+  width: 100%;
   max-height: 80%;
 }
 
@@ -182,7 +183,7 @@
 
 #upcoming-events-section {
   background-color: rgb(201, 255, 255);
-  padding: 45svh;
+  width: 100%;
 }
 
 /*desktop version*/
@@ -196,6 +197,7 @@
     left: 10%;
     right: 10%;
     padding: 0.6rem;
+    /* max-height: 100px; */
   }
 
   #nav-bar ul {
@@ -217,6 +219,10 @@
 
   #nav-expand-button {
     display: none;
+  }
+
+  #main-nav.open {
+    padding-top: 0;
   }
 
   .hero-slideshow, .hero-slideshow img {
