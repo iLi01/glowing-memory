@@ -19,8 +19,8 @@ span.onclick = function() {
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
+window.onclick = function(e) {
+  if (e.target == modal) {
     modal.style.display = "none";
   }
 }
@@ -53,4 +53,3 @@ const nav = document.getElementById("main-nav");
 button.addEventListener('click', () => {
   nav.classList.toggle('open');
 });
-

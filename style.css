@@ -80,7 +80,7 @@
 .modal {
   display: none; 
   position: fixed; 
-  z-index: 1;
+  z-index: 10000;
   padding-top: 100px;
   left: 0;
   top: 0;
@@ -183,7 +183,7 @@
 
 #hero-text {
   position: absolute;
-  top: 11rem;
+  top: 10.5rem;
   right: 1.5rem;
   direction: rtl;
   font-size: 1.5rem;
@@ -198,14 +198,13 @@
 
 #first-word {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 900;
   letter-spacing: 0.6rem;
-  line-height: 0.5rem;
+  line-height: 3rem;
   color: rgb(0, 0, 0);
-  margin-bottom: 1.6rem;
 }
 
-#hero-button {
+/* #hero-button {
   border: none;
   border-radius: 0.8rem;
   margin-top: 1rem;
@@ -214,6 +213,44 @@
   text-transform: uppercase;
   color: #ffffff;
   font-weight: 700;
+} */
+
+#introduction-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.intro-text-container {
+  width: 100%;
+  padding: 2rem;
+}
+
+.intro-img-container {
+  width: 100%;
+  padding: 2rem;
+}
+
+.image-intro {
+  object-fit: cover;
+  width: 100%;
+}
+
+#cloud {
+  position: relative;
+  left: 9rem;
+  top: 25rem;
+  width: 450px;
+}
+
+#mock-text {
+  width: 100%;
+  padding: 2rem;
+  margin: auto;
+}
+
+#mock-text > p {
+  color: aquamarine;
 }
 
 #upcoming-events-section {
@@ -232,7 +269,9 @@
     left: 10%;
     right: 10%;
     padding: 0.6rem;
-    /* max-height: 100px; */
+    /* ultra wide screen */
+    max-width: 1800px;
+    margin: auto;
   }
 
   #nav-bar ul {
@@ -261,9 +300,69 @@
   }
 
   .hero-slideshow, .hero-slideshow img {
-    height: 87vh;
+    height: 87vh; 
+    /* ultra wide screen */
+    /* max-width: 2000px; 
+    margin: auto; */
   }
 
+  #hero-text {
+    position: absolute;
+    top: 18rem;
+    right: 6rem;
+    direction: rtl;
+    font-size: 4rem;
+    font-weight: 900;
+    letter-spacing: 1rem;
+    word-spacing: 0.3rem;
+    line-height: 3.6rem;
+  }
+
+  #first-word {
+    font-size: 7rem;
+    font-weight: 900;
+    letter-spacing: 1.3rem;
+    line-height: 0.5rem;
+    margin-bottom: 4rem;
+  }
+
+  #introduction-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 10%;
+  }
+
+  .intro-text-container {
+    width: 50%;
+    padding: 2rem;
+  }
+  
+  .intro-img-container {
+    width: 50%;
+    padding: 2rem;
+  }
+  
+  .image-intro {
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  /* #hero-button {
+    border: none;
+    border-radius: 0.8rem;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #8bcfffa7;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+  } */
+}
+
+@media (prefers-color-scheme: dark) {
+  /* add button as well? */
 }
 
 
