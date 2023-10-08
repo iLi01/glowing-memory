@@ -238,9 +238,10 @@
 
 #cloud {
   position: relative;
-  left: 9rem;
+  left: 7rem;
   top: 25rem;
-  width: 450px;
+  min-width: none;
+  max-width: 100%;
 }
 
 #mock-text {
