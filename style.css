@@ -2,9 +2,18 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Titillium Web', sans-serif;
   background-color: transparent;
   scroll-behavior: smooth;
+  font-size: 16px;
+}
+/* 
+:root {
+
+} */
+
+body {
+  background-color: rgba(255, 255, 255, 0.928);
 }
 
 /* logo img */
@@ -101,7 +110,7 @@
   display: flex;
   flex-direction: column;
   border: none;
-  border-radius: 0.4rem;
+  border-radius: 1rem;
 }
 
 /* text in modal */
@@ -143,7 +152,7 @@
 /* individual img of slideshow */
 .hero-slideshow img {
   width: 100%;
-  height: 20rem;
+  height: 40rem;
   object-fit: cover;
   border-radius: 0 0 1rem 1rem;
 }
@@ -183,7 +192,7 @@
 
 #hero-text {
   position: absolute;
-  top: 10.5rem;
+  top: 28rem;
   right: 1.5rem;
   direction: rtl;
   font-size: 1.5rem;
@@ -229,19 +238,36 @@
 .intro-img-container {
   width: 100%;
   padding: 2rem;
+  /* justify-content: flex-end; */
 }
 
-.image-intro {
+#image-intro {
   object-fit: cover;
   width: 100%;
 }
 
-#cloud {
-  position: relative;
-  left: 7rem;
-  top: 25rem;
-  min-width: none;
-  max-width: 100%;
+/* #cloud-img {
+  width: 20rem;
+  position: absolute;
+  animation: MoveUpDown 5s linear infinite;
+  position: absolute;
+} */
+
+#kite-img {
+  width: 23rem;
+  animation: MoveUpDown 5.5s linear infinite;
+  position: absolute;
+  right: 2rem;
+  margin-bottom: -25rem;
+}
+
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 40px;
+  }
 }
 
 #mock-text {
@@ -312,7 +338,7 @@
     top: 18rem;
     right: 6rem;
     direction: rtl;
-    font-size: 4rem;
+    font-size: 7rem;
     font-weight: 900;
     letter-spacing: 1rem;
     word-spacing: 0.3rem;
@@ -327,6 +353,43 @@
     margin-bottom: 4rem;
   }
 
+  .down-arrow {
+    position: absolute;
+    top: calc(100vh - 80px);
+    left: calc(50% - 14px);
+    width: 0;
+    height: 30px;
+    border: 2px solid;
+    border-radius: 2px;
+    animation: jumpInfinite 1.5s infinite;
+    fill:rgb(0, 0, 0);
+  }
+  
+  .down-arrow:after {
+    content: " ";
+    position: absolute;
+    top: 12px;
+    left: -10px;
+    width: 16px;
+    height: 16px;
+    border-bottom: 4px solid;
+    border-right: 4px solid;
+    border-radius: 4px;
+    transform: rotateZ(45deg);
+  }
+  
+  @keyframes jumpInfinite {
+    0% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: 20px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+  
   #introduction-section {
     display: flex;
     flex-direction: row;
@@ -349,7 +412,7 @@
     object-fit: cover;
     width: 100%;
   }
-  
+
   /* #hero-button {
     border: none;
     border-radius: 0.8rem;
