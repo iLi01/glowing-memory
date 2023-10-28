@@ -53,3 +53,16 @@ const nav = document.getElementById("main-nav");
 button.addEventListener('click', () => {
   nav.classList.toggle('open');
 });
+
+
+// document.querySelector('#beer-button').addEventListener('click', function () {
+//   fetch('https://api.punkapi.com/v2/beers/random')
+//     .then((response) => {
+//       return response.text();
+//     })
+//     .then((myContent) => {
+//       document.querySelector('.par').innerHTML = myContent;
+//       document.querySelector('.par').classList.add('box');
+//     });
+
+// }, false);
