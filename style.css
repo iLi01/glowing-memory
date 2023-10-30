@@ -279,6 +279,7 @@ body {
   animation: MoveUpDown 6s linear infinite;
   position: absolute;
   top: 60rem;
+  z-index: 2000;
 }
 
 @keyframes MoveUpDown {
@@ -292,6 +293,7 @@ body {
   }
 }
 
+/* icons for each table event */
 .modal-icons {
   display: inline-block;
 }
@@ -300,16 +302,27 @@ body {
   width: 1rem;
 }
 
-#mock-text {
-  width: 100%;
-  padding: 2rem;
+/* like div elements to make the slideshow for each month */
+thead {
+  background-color: #888;
+}
+
+/* slideshow individual arrow buttons */
+.modal-slideshow-button {
+  display: inline-block;
+  width: 50px;
+  justify-content: space-around;
+}
+
+/* slideshow container arrow buttons */
+#modal-buttons-container {
   margin: auto;
+  max-width: 20rem;
+  display: flex;
+  justify-content: space-around;
 }
 
-#mock-text > p {
-  color: aquamarine;
-}
-
+/* 3 grid with events */
 #events-grid {
   width: 100%;
   display: flex;
@@ -351,6 +364,29 @@ body {
   margin-bottom: 2rem;
   box-shadow: 0 0 2px 2px #ffffff;
 }
+
+/* youtube video "how to" */
+.youtube-video-container {
+  margin: auto;
+  max-width: 30rem;
+  height: 15rem;
+}
+
+iframe {
+  object-fit: cover;
+  width: 100%;
+}
+
+/* .building-kite-container {
+  width: 100%;
+  margin: auto;
+}
+
+#building-kite-img {
+  width: 80%;
+  object-fit: cover;
+  
+} */
 
 /*desktop version*/
 @media screen and (min-width: 600px){
