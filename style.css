@@ -85,54 +85,6 @@ body {
   display: none;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; 
-  position: fixed; 
-  z-index: 10000;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: rgba(177, 212, 255, 0.424);
-}
-
-/* modal content */
-.modal-content {
-  width: 80%;
-  background-color: #fefefe;
-  margin: auto;
-  padding: 2rem;
-  border: 1px solid #888;
-  display: flex;
-  flex-direction: column;
-  border: none;
-  border-radius: 1rem;
-}
-
-/* text in modal */
-#modal-text {
-  padding: 1rem;
-}
-
-/* close btn */
-.close {
-  color: #aaaaaa;
-  align-self: flex-end;
-  font-size: 1.7rem;
-  font-weight: bold;
-  padding-right: 1rem;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
-
 /*slideshow container*/
 .hero-section {
   padding: unset !important;
@@ -292,6 +244,56 @@ body {
   }
 }
 
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 10000;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(177, 212, 255, 0.424);
+}
+
+/* modal content */
+.modal-content {
+  width: 90%;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0.4rem;
+  border: 1px solid #888;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* text in modal */
+#modal-text {
+  padding: 1rem;
+  margin-bottom: 0.7rem;
+}
+
+/* close btn */
+.close {
+  color: #aaaaaa;
+  align-self: flex-end;
+  font-size: 1.7rem;
+  font-weight: bold;
+  padding-right: 1rem;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 /* icons for each table event */
 .modal-icons {
   display: inline-block;
@@ -302,13 +304,13 @@ body {
 }
 
 tr {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 /* like div elements to make the slideshow for each month */
 thead {
   background-color: #888;
-  max-height: 64vh;
+  height: 70vh;
   width: 100%;
   overflow: hidden;
 }
@@ -326,6 +328,7 @@ thead {
   max-width: 20rem;
   display: flex;
   justify-content: space-around;
+  margin-top: 1.1rem;
 }
 
 /* 3 grid with events */
@@ -335,7 +338,7 @@ thead {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin: 6rem auto auto auto;
+  margin: auto;
   padding-top: 3rem;
   padding-bottom: 5rem;
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(164,200,221,255) 50%, rgba(255,255,255,1) 100%);
@@ -383,6 +386,11 @@ iframe {
   width: 100%;
 }
 
+#square {
+  height: 30vh;
+  border-radius: 1rem 1rem 0 0;
+  background-color: aqua;
+}
 /* .building-kite-container {
   width: 100%;
   margin: auto;
@@ -502,11 +510,46 @@ iframe {
   } */
 
   #events-grid {
+    flex-wrap: wrap;
     flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    margin: auto;
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(164,200,221,255) 50%, rgba(255,255,255,1) 100%);
+  }
+
+  #container-event_1 {
+    width: 15rem;
+    height: 50vh;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 2px 2px #ffffff;
+  }
+  
+  #container-event_2 {
+    width: 15rem;
+    height: 50vh;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 2px 2px #ffffff;
+  }
+  
+  #container-event_3 {
+    width: 15rem;
+    height: 50vh;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 2px 2px #ffffff;
+  }
+
+  #events-btn {
+    width: 20%;
   }
 
   thead {
     min-height: 54vh;
+  }
+
+  tr {
+    font-size: 16px;
   }
 }
 
