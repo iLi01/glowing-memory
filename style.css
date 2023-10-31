@@ -255,7 +255,7 @@ body {
   width: 100%; 
   height: 100%; 
   overflow: auto; 
-  background-color: rgba(177, 212, 255, 0.424);
+  background-color: rgba(178, 178, 178, 0.424);
 }
 
 /* modal content */
@@ -331,6 +331,10 @@ thead {
   margin-top: 1.1rem;
 }
 
+.background-events-grid {
+  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(164,200,221,255) 50%, rgba(255,255,255,1) 100%);
+}
+
 /* 3 grid with events */
 #events-grid {
   width: 100%;
@@ -341,7 +345,6 @@ thead {
   margin: auto;
   padding-top: 3rem;
   padding-bottom: 5rem;
-  background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(164,200,221,255) 50%, rgba(255,255,255,1) 100%);
 }
 
 #container-event_1 {
@@ -350,6 +353,7 @@ thead {
   /* outline: 3px solid black; */
   width: 85%;
   height: 6rem;
+  max-height: 24rem;
   margin-bottom: 2rem;
   box-shadow: 0 0 2px 2px #ffffff;
 }
@@ -360,6 +364,7 @@ thead {
   /* outline: 3px solid black; */
   width: 85%;
   height: 6rem;
+  max-height: 24rem;
   margin-bottom: 2rem;
   box-shadow: 0 0 2px 2px #ffffff;
 }
@@ -370,20 +375,9 @@ thead {
   /* outline: 3px solid black; */
   width: 85%;
   height: 6rem;
+  max-height: 24rem;
   margin-bottom: 2rem;
   box-shadow: 0 0 2px 2px #ffffff;
-}
-
-/* youtube video "how to" */
-.youtube-video-container {
-  margin: auto;
-  max-width: 30rem;
-  height: 15rem;
-}
-
-iframe {
-  object-fit: cover;
-  width: 100%;
 }
 
 #square {
@@ -509,14 +503,18 @@ iframe {
     font-weight: 700;
   } */
 
+  .background-events-grid {
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(164,200,221,255) 50%, rgba(255,255,255,1) 100%);
+  }
+
   #events-grid {
+    max-width: 1200px;
     flex-wrap: wrap;
     flex-direction: row;
     width: 100%;
     align-items: center;
     justify-content: space-around;
     margin: auto;
-    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(164,200,221,255) 50%, rgba(255,255,255,1) 100%);
   }
 
   #container-event_1 {
@@ -540,12 +538,24 @@ iframe {
     box-shadow: 0 0 2px 2px #ffffff;
   }
 
+    /* modal content */
+  .modal-content {
+    width: 70%;
+    padding: 2.5rem;
+    padding-bottom: 0rem;
+  }
+
+  .events-btn-container {
+    flex-basis: 100%;
+  }
+
   #events-btn {
     width: 20%;
   }
 
+  /* size of the modal text */
   thead {
-    min-height: 54vh;
+    max-height: 60vh;
   }
 
   tr {
