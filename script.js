@@ -87,3 +87,28 @@ function showDivs(n) {
 }
 
 
+
+
+
+import axios from 'axios';
+
+const options = {
+  method: 'GET',
+  url: 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search',
+  params: {
+    keyword: 'kite',
+    country: 'GB',
+    category: 'aps'
+  },
+  headers: {
+    'X-RapidAPI-Key': 'b60f3940f5msh93c7cc79fc472bfp1b87c5jsnfffc34a23d20',
+    'X-RapidAPI-Host': 'amazon-product-reviews-keywords.p.rapidapi.com'
+  }
+};
+
+try {
+	const response = await axios.request(options);
+	console.log(response.data);
+} catch (error) {
+	console.error(error);
+}
