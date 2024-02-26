@@ -203,6 +203,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  max-width: 1800px;
 }
 
 .intro-text-container {
@@ -226,6 +227,7 @@ body {
 #image-intro {
   object-fit: cover;
   width: 100%;
+  max-width: 700px;
 }
 
 /* #cloud-img {
@@ -472,6 +474,13 @@ iframe {
     font-size: 2rem;
   }
 
+  #intro-para {
+    font-size: 1.3rem;
+    max-width: 80%;
+    word-spacing: 0.5rem;
+    line-height: 2rem;
+  }
+
   #first-word {
     font-size: 7rem;
     font-weight: 900;
@@ -506,7 +515,7 @@ iframe {
 
   #kite-img {
     width: 35rem;
-    margin-left: 43rem;
+    margin-left: 40%;
     top: 54rem;
   }
 
@@ -584,8 +593,59 @@ iframe {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  /* add button as well? */
+
+/*not too BIG desktop version*/ 
+@media screen and (min-width: 1880px){
+  * {
+    background-color: transparent;
+  }
+
+  #kite-img {
+    width: 40rem;
+    margin-left: 40%;
+    /* //big screen where kite at */
+    top: 67rem;
+  }
+
+  #intro-para {
+    font-size: 1.2rem;
+    max-width: 80%;
+    word-spacing: 0.5rem;
+    line-height: 2rem;
+  }
 }
 
+/*BIG desktop version 2k*/ 
+@media screen and (min-width: 2400px){
+  * {
+    background-color: transparent;
+  }
 
+  #kite-img {
+    width: 40rem;
+    margin-left: 40%;
+    /* //big screen where kite at */
+    top: 90rem;
+  }
+}
+
+/*BIG desktop version 4k*/ 
+@media screen and (min-width: 3000px){
+  * {
+    background-color: transparent;
+  }
+
+  #kite-img {
+    width: 33rem;
+    margin-left: 46%;
+    /* //big screen where kite at */
+    top: 138rem;
+  }
+
+  #intro-para {
+    font-size: 1rem;
+    max-width: 80%;
+    word-spacing: 0.5rem;
+    line-height: 1.6rem;
+  }
+}

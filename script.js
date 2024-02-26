@@ -54,20 +54,6 @@ button.addEventListener('click', () => {
   nav.classList.toggle('open');
 });
 
-
-// document.querySelector('#beer-button').addEventListener('click', function () {
-//   fetch('https://api.punkapi.com/v2/beers/random')
-//     .then((response) => {
-//       return response.text();
-//     })
-//     .then((myContent) => {
-//       document.querySelector('.par').innerHTML = myContent;
-//       document.querySelector('.par').classList.add('box');
-//     });
-
-// }, false);
-
-
 let slideIndex = 1;
 showDivs(slideIndex);
 
@@ -86,29 +72,3 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
 }
 
-
-
-
-
-import axios from 'axios';
-
-const options = {
-  method: 'GET',
-  url: 'https://amazon-product-reviews-keywords.p.rapidapi.com/product/search',
-  params: {
-    keyword: 'kite',
-    country: 'GB',
-    category: 'aps'
-  },
-  headers: {
-    'X-RapidAPI-Key': 'b60f3940f5msh93c7cc79fc472bfp1b87c5jsnfffc34a23d20',
-    'X-RapidAPI-Host': 'amazon-product-reviews-keywords.p.rapidapi.com'
-  }
-};
-
-try {
-	const response = await axios.request(options);
-	console.log(response.data);
-} catch (error) {
-	console.error(error);
-}
