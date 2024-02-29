@@ -228,6 +228,7 @@ body {
   object-fit: cover;
   width: 100%;
   max-width: 700px;
+  max-height: 230px;
 }
 
 /* #cloud-img {
@@ -241,8 +242,19 @@ body {
   width: 20rem;
   animation: MoveUpDown 6s linear infinite;
   position: absolute;
-  top: 60rem;
+  top: 63rem;
   z-index: 2000;
+}
+
+#intro-h{
+  font-size: 1rem;
+}
+
+#intro-para {
+  font-size: 0.7rem;
+  max-width: 80%;
+  word-spacing: 0.3rem;
+  line-height: 1.2rem;
 }
 
 @keyframes MoveUpDown {
@@ -355,13 +367,13 @@ thead {
   flex-direction: column;
   justify-content: center;
   margin: auto;
-  padding-top: 3rem;
-  padding-bottom: 5rem;
+  padding-top: 8rem;
+  padding-bottom: 10rem;
 }
 
 #container-event_1 {
   background-color: rgba(255, 255, 255, 0.88);
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   /* outline: 3px solid black; */
   width: 85%;
   height: 6rem;
@@ -372,7 +384,7 @@ thead {
 
 #container-event_2 {
   background-color: rgba(255, 255, 255, 0.88);
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   /* outline: 3px solid black; */
   width: 85%;
   height: 6rem;
@@ -383,7 +395,7 @@ thead {
 
 #container-event_3 {
   background-color: rgba(255, 255, 255, 0.88);
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   /* outline: 3px solid black; */
   width: 85%;
   height: 6rem;
@@ -391,6 +403,8 @@ thead {
   margin-bottom: 2rem;
   box-shadow: 0 0 2px 2px #ffffff;
 }
+
+/* ////btn */
 
 iframe {
   display: flex;
@@ -402,7 +416,8 @@ iframe {
 #square {
   height: 30vh;
   border-radius: 1rem 1rem 0 0;
-  background-color: aqua;
+  background-color: #a4c8dd6e;
+  margin-top: 10rem;
 }
 /* .building-kite-container {
   width: 100%;
@@ -414,6 +429,17 @@ iframe {
   object-fit: cover;
   
 } */
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  padding-top: 1.5rem; 
+}
+
+.container-event_img {
+  margin: auto;
+}
 
 /*desktop version*/
 @media screen and (min-width: 600px){
@@ -481,6 +507,10 @@ iframe {
     line-height: 2rem;
   }
 
+  #intro-h{
+    font-size: 1.8rem;
+  }
+
   #first-word {
     font-size: 7rem;
     font-weight: 900;
@@ -508,9 +538,10 @@ iframe {
     max-width: 55rem;
   }
   
-  .image-intro {
+  #image-intro {
     object-fit: cover;
     width: 100%;
+    max-height: 400px;
   }
 
   #kite-img {
@@ -577,10 +608,21 @@ iframe {
     flex-basis: 100%;
     display: flex;
     justify-content: center;
+
   }
 
   #events-btn {
     width: 20%;
+    /* background-color: #000; */
+    border: 0.2rem solid #97bbffa9;
+    border-radius: 3rem;
+    font-size: 1.2rem;
+    max-width: 80%;
+    word-spacing: 0.3rem;
+    line-height: 1.8rem;
+    cursor: pointer;
+    padding: 0.4rem;
+    /* background-color: #fefefe87; */
   }
 
   /* size of the modal text */
@@ -610,8 +652,8 @@ iframe {
   #intro-para {
     font-size: 1.2rem;
     max-width: 80%;
-    word-spacing: 0.5rem;
-    line-height: 2rem;
+    word-spacing: 0.3rem;
+    line-height: 1.8rem;
   }
 }
 
