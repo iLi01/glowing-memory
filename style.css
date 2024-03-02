@@ -369,6 +369,7 @@ thead {
   margin: auto;
   padding-top: 8rem;
   padding-bottom: 10rem;
+  gap: 1.5rem;
 }
 
 #container-event_1 {
@@ -380,6 +381,16 @@ thead {
   max-height: 24rem;
   margin-bottom: 2rem;
   box-shadow: 0 0 2px 2px #ffffff;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+
+  /* //mobile grid version */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 1rem;
 }
 
 #container-event_2 {
@@ -391,6 +402,16 @@ thead {
   max-height: 24rem;
   margin-bottom: 2rem;
   box-shadow: 0 0 2px 2px #ffffff;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+
+  /* //mobile grid version */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 1rem;
 }
 
 #container-event_3 {
@@ -402,9 +423,37 @@ thead {
   max-height: 24rem;
   margin-bottom: 2rem;
   box-shadow: 0 0 2px 2px #ffffff;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+
+  /* //mobile grid version */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 1rem;
 }
 
-/* ////btn */
+.text-container {
+  padding: 0.5rem 0.3rem;
+  font-size: 0.8rem;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-right: 40%;
+  /* padding-top: 0.5rem;  */
+  padding-left: 0.5rem;
+}
+
+.container-event_img {
+  margin: auto;
+}
+
+
 
 iframe {
   display: flex;
@@ -430,16 +479,48 @@ iframe {
   
 } */
 
-.img-container {
+
+/* ////btn for modal*/
+.events-btn-container {
+  padding-top: 2rem;
+  flex-basis: 100%;
   display: flex;
   justify-content: center;
-  margin: auto;
-  padding-top: 1.5rem; 
+  width: 100%;
 }
 
-.container-event_img {
-  margin: auto;
+#events-btn {
+  width: 20%;
+  /* background-color: #000; */
+  border: 0.2rem solid #97bbffa9;
+  width: 100%;
+  border-radius: 3rem;
+  font-size: 1rem;
+  max-width: 80%;
+  word-spacing: 0.3rem;
+  line-height: 1.3rem;
+  cursor: pointer;
+  padding: 0.4rem;
+  /* background-color: #fefefe87; */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+//////////////////////////////////////////////////// */
+
+
+
 
 /*desktop version*/
 @media screen and (min-width: 600px){
@@ -573,27 +654,71 @@ iframe {
     align-items: center;
     justify-content: space-around;
     margin: auto;
+    gap: 4rem;
   }
 
   #container-event_1 {
-    width: 15rem;
+    width: 17rem;
     height: 50vh;
     margin-bottom: 2rem;
     box-shadow: 0 0 2px 2px #ffffff;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 0rem;
+
+    /* //desktop grid version */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;    
   }
   
   #container-event_2 {
-    width: 15rem;
+    width: 17rem;
     height: 50vh;
     margin-bottom: 2rem;
     box-shadow: 0 0 2px 2px #ffffff;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 0rem;
+
+    /* //desktop grid version */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;    
   }
   
   #container-event_3 {
-    width: 15rem;
+    width: 17rem;
     height: 50vh;
     margin-bottom: 2rem;
     box-shadow: 0 0 2px 2px #ffffff;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    border-bottom-left-radius: 0rem;
+
+    /* //desktop grid version */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;    
+  }
+
+  .text-container {
+    padding: 1rem 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .img-container {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding-top: 1.5rem; 
+    padding-left: 0rem;
   }
 
     /* modal content */

@@ -54,6 +54,7 @@ button.addEventListener('click', () => {
   nav.classList.toggle('open');
 });
 
+//slideshow of modal pages
 let slideIndex = 1;
 showDivs(slideIndex);
 
@@ -72,3 +73,10 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";
 }
 
+//changing the src of the img if in mobile / desktop mode
+if (window.screen.width <= 600 ) {
+  // alert('testing')
+  document.getElementById("container-event_img1").src="https://placehold.jp/150x80.png";
+  document.getElementById("container-event_img2").src="https://placehold.jp/150x80.png";
+  document.getElementById("container-event_img3").src="https://placehold.jp/150x80.png";
+} ;
