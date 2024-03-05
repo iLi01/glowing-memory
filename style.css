@@ -49,7 +49,7 @@ body {
   left: 0;
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 /* burger menu icon */
@@ -231,12 +231,20 @@ body {
   max-height: 230px;
 }
 
-/* #cloud-img {
-  width: 20rem;
+#cloud-img {
+  /* width: 20rem; */
+  animation: MoveUpDown 6s linear infinite;
   position: absolute;
-  animation: MoveUpDown 5s linear infinite;
-  position: absolute;
-} */
+  top: 146rem;
+  z-index: -1;
+  /* padding-left: 90vh; */
+  width: 10rem;
+}
+
+#transparent-cloud {
+  max-width: 350px;
+  max-height: 300px; 
+}
 
 #kite-img {
   width: 20rem;
@@ -265,6 +273,17 @@ body {
   50% {
     bottom: 40px;
     left: 20px;
+  }
+}
+
+@keyframes MoveUpDownExtra {
+  0%, 100% {
+    bottom: 0;
+    left: 0;
+  }
+  60% {
+    bottom: 40px;
+    left: 50px;
   }
 }
 
@@ -357,6 +376,7 @@ thead {
 
 .background-events-grid {
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(164,200,221,255) 50%, rgba(255,255,255,1) 100%);
+  z-index: -2;
 }
 
 /* 3 grid with events */
@@ -368,8 +388,8 @@ thead {
   justify-content: center;
   margin: auto;
   padding-top: 8rem;
-  padding-bottom: 10rem;
-  gap: 1.5rem;
+  padding-bottom: 8rem;
+  gap: 2.8rem;
 }
 
 #container-event_1 {
@@ -386,11 +406,10 @@ thead {
 
   /* //mobile grid version */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  gap: 1rem;
 }
 
 #container-event_2 {
@@ -407,11 +426,10 @@ thead {
 
   /* //mobile grid version */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  gap: 1rem;
 }
 
 #container-event_3 {
@@ -428,16 +446,23 @@ thead {
 
   /* //mobile grid version */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  gap: 1rem;
 }
 
+/* container of text in the cards */
 .text-container {
-  padding: 0.5rem 0.3rem;
-  font-size: 0.8rem;
+  padding: 0.5rem 0.6rem;
+  font-size: 0.7rem;
+  line-height: 0.85rem;
+  grid-area: 1 / 2 / 2 / 4;
+  min-height: 4.5rem;
+}
+
+#bold-text-span {
+  font-weight: 800;
 }
 
 .img-container {
@@ -447,13 +472,20 @@ thead {
   margin-right: 40%;
   /* padding-top: 0.5rem;  */
   padding-left: 0.5rem;
+  grid-area: 1 / 1 / 3 / 2;
+}
+
+  /* container of arrow button svg */
+.btn-container {
+  display: flex;
+  justify-content: end;
+  padding: 0rem 1rem; 
+  grid-area: 2 / 2 / 3 / 4;
 }
 
 .container-event_img {
   margin: auto;
 }
-
-
 
 iframe {
   display: flex;
@@ -465,7 +497,7 @@ iframe {
 #square {
   height: 30vh;
   border-radius: 1rem 1rem 0 0;
-  background-color: #a4c8dd6e;
+  background-color: #dddddd;
   margin-top: 10rem;
 }
 /* .building-kite-container {
@@ -504,9 +536,108 @@ iframe {
   /* background-color: #fefefe87; */
 }
 
+#preparation-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-width: 1800px;
+  gap: 4rem;
+}
 
+/* //weather api */
 
+#weather-api {
+  width: 100%;
+}
 
+.container {
+  max-width: 100%;
+}
+
+.form-control:focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0rem rgb(0 123 255 / 25%);
+}
+
+/* WEATHER DETAIL BOX */
+.detail-box {
+  text-align: center;
+}
+
+.temperature {
+  display: flex;
+  justify-content: center;
+}
+
+.temperature > .weather-icon {
+  width: 120px;
+  height: 120px;
+}
+
+.temperature .txt {
+  display: flex;
+  align-items: baseline;
+}
+
+.temperature > .txt > h2 {
+  font-size: 100px;
+  color: black;
+}
+
+.temperature > .txt > h3 {
+  font-size: 25px;
+}
+
+.detail-box > .city {
+  color: black;
+  font-size: 60px;
+}
+
+.input-group {
+  background: #fff;
+  border: 0.2rem solid #97bbffa9;
+  border-radius: 100px;
+  overflow: hidden;
+  position: relative;
+  max-width: 500px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.input-group > .form-control {
+  background: #fff;
+  height: 50px;
+  border: none;
+  font-size: 18px;
+  /* color: #272c49; */
+  padding: 25px;
+}
+
+.search-btn {
+  font-size: 18px;
+  width: 130px;
+  border-radius: 0px;
+  background: #97bbffa9;
+  color: #fff;
+  padding-top: 10px;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-btn:hover {
+  color: #fff;
+}
+
+#flex-youtube-weather {
+  display: grid;
+  grid-template-columns: 1fr;
+grid-template-rows: repeat(2, 1fr);
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+gap: 1rem;
+}
 
 
 
@@ -631,6 +762,20 @@ iframe {
     top: 54rem;
   }
 
+  #cloud-img {
+    /* width: 20rem; */
+    animation: MoveUpDown 6s linear infinite;
+    position: absolute;
+    top: 160rem;
+    z-index: -1;
+    /* padding-left: 90vh; */
+  }
+  
+  #transparent-cloud {
+    min-width: 1400px;
+    min-height: 900px; 
+  }
+
   /* #hero-button {
     border: none;
     border-radius: 0.8rem;
@@ -659,58 +804,75 @@ iframe {
 
   #container-event_1 {
     width: 17rem;
-    height: 50vh;
+    /* height: 50vh; */
     margin-bottom: 2rem;
     box-shadow: 0 0 2px 2px #ffffff;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     border-bottom-left-radius: 0rem;
+    min-height: 420px;
 
     /* //desktop grid version */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 0px;    
+    grid-row-gap: 0px;
   }
   
   #container-event_2 {
     width: 17rem;
-    height: 50vh;
+    /* height: 50vh; */
     margin-bottom: 2rem;
     box-shadow: 0 0 2px 2px #ffffff;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     border-bottom-left-radius: 0rem;
+    min-height: 420px;
 
     /* //desktop grid version */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
-    grid-row-gap: 0px;    
+    grid-row-gap: 0px;  
   }
   
   #container-event_3 {
     width: 17rem;
-    height: 50vh;
+    /* height: 50vh; */
     margin-bottom: 2rem;
     box-shadow: 0 0 2px 2px #ffffff;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     border-bottom-left-radius: 0rem;
-
+    min-height: 420px;
+    
     /* //desktop grid version */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;    
   }
 
+  /* container of text in the cards */
   .text-container {
     padding: 1rem 1.2rem;
+    line-height: 1.5rem;
     font-size: 1.2rem;
+    overflow: hidden;
+    min-height: 150px;
+    /* make it bigger */
+    grid-area: 2 / 1 / 3 / 2;
+  }
+
+  /* container of arrow button svg */
+  .btn-container {
+    display: flex;
+    justify-content: end;
+    padding: 1rem 1.8rem; 
+    grid-area: 3 / 1 / 4 / 2; 
   }
 
   .img-container {
@@ -719,6 +881,26 @@ iframe {
     margin: auto;
     padding-top: 1.5rem; 
     padding-left: 0rem;
+    grid-area: 1 / 1 / 2 / 2;
+  }
+
+  #preparation-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    padding: 10%;
+    justify-content: center;
+  }
+
+  #preparation-section > .intro-text-container {
+    /* padding-left: 10%; */
+    min-width: 1000px;
+    margin-left: 10%;
+  }
+
+  #transparent-cloud {
+    max-height: 300px;
   }
 
     /* modal content */
@@ -758,7 +940,24 @@ iframe {
   tr {
     font-size: 16px;
   }
+
+  #flex-youtube-weather {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 6%;
+  }
 }
+
+
+
+
+
+
+
+
 
 
 /*not too BIG desktop version*/ 
@@ -772,6 +971,13 @@ iframe {
     margin-left: 40%;
     /* //big screen where kite at */
     top: 67rem;
+  }
+
+  #cloud-img {
+    width: 40rem;
+    margin-left:20%;
+    /* //big screen where kite at */
+    top: 170rem;
   }
 
   #intro-para {
@@ -794,6 +1000,14 @@ iframe {
     /* //big screen where kite at */
     top: 90rem;
   }
+
+  #cloud-img {
+    width: 40rem;
+    margin-left:30%;
+    /* //big screen where kite at */
+    top: 190rem;
+  }
+
 }
 
 /*BIG desktop version 4k*/ 
@@ -814,5 +1028,12 @@ iframe {
     max-width: 80%;
     word-spacing: 0.5rem;
     line-height: 1.6rem;
+  }
+
+  #cloud-img {
+    width: 40rem;
+    margin-left:43%;
+    /* //big screen where kite at */
+    top: 250rem;
   }
 }
