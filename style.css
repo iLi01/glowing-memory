@@ -398,7 +398,9 @@ thead {
 td {
   background-color: #f0f0f0;
   padding-left: 0.3rem;
-  font-size: 0.75rem;
+  font-size: 0.7rem;
+  padding-right: 0.2rem;
+  padding-bottom: 0.665rem;
 }
 
 #months-td{
@@ -416,6 +418,14 @@ td {
   width: 50px;
   justify-content: space-around;
   border: none;
+  cursor: pointer;
+  transition: 0s background-color;
+}
+
+.modal-slideshow-button:hover {
+  background-color: #97bbffa9;
+  transition-duration: 1s;
+  border-radius: 1rem;
 }
 
 /* slideshow container arrow buttons */
@@ -916,7 +926,7 @@ iframe {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     border-bottom-left-radius: 0rem;
-    min-height: 420px;
+    min-height: 450px;
 
     /* //desktop grid version */
     display: grid;
@@ -934,7 +944,7 @@ iframe {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     border-bottom-left-radius: 0rem;
-    min-height: 420px;
+    min-height: 450px;
 
     /* //desktop grid version */
     display: grid;
@@ -952,7 +962,7 @@ iframe {
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
     border-bottom-left-radius: 0rem;
-    min-height: 420px;
+    min-height: 450px;
     
     /* //desktop grid version */
     display: grid;
@@ -968,7 +978,7 @@ iframe {
     line-height: 1.5rem;
     font-size: 0.9rem;
     overflow: hidden;
-    min-height: 150px;
+    min-height: 190px;
     /* make it bigger */
     grid-area: 2 / 1 / 3 / 2;
     max-width: 300px;
@@ -1080,6 +1090,7 @@ thead {
 td {
   background-color: #f0f0f0;
   padding-left: 0.3rem;
+  padding-right:2rem;
 }
 
 #months-td{
