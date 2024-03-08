@@ -76,13 +76,13 @@ function showDivs(n) {
 //changing the src of the img if in mobile / desktop mode
 if (window.screen.width <= 600 ) {
   // alert('testing')
-  document.getElementById("container-event_img1").src="https://placehold.jp/150x80.png";
-  document.getElementById("container-event_img2").src="https://placehold.jp/150x80.png";
-  document.getElementById("container-event_img3").src="https://placehold.jp/150x80.png";
+  document.getElementById("container-event_img1").src="./assets/gallery-kite-events-mboile.jpg";
+  document.getElementById("container-event_img2").src="./assets/types-of-kites-mobile.jpg";
+  document.getElementById("container-event_img3").src="./assets/kite-picnic-mobile.jpg";
 } ;
 
-//wether api
-const searchBtn = document.getElementById("searchBtn");
+//weather api
+const searchBtn = document.getElementById("search-btn_weather");
 searchBtn.addEventListener("click", showData)
 
 function showData() {

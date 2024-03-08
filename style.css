@@ -13,6 +13,20 @@
   --heading-font: 'Reem Kufi', sans-serif;
 }
 
+.screen-reading {
+  border: 0; 
+  clip: rect(0 0 0 0); 
+  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px); 
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px); 
+  height: 1px; 
+  margin: -1px; 
+  overflow: hidden; 
+  padding: 0; 
+  position: absolute; 
+  width: 1px; 
+  white-space: nowrap; 
+}
+
 body {
   background-color: rgba(255, 255, 255, 0.928);
   font-size: 16px;
@@ -72,10 +86,20 @@ body {
   gap: 1rem;
   margin-right: 1.5rem;
   margin-bottom: 1rem;
+  
 }
 
 #nav-bar ul a {
   text-decoration: none;
+  font-size: 0.9rem;
+  color: #000;
+  /* font-weight: 600; */
+}
+
+#last-list-element {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
 
 /* screen-reading menu */
@@ -197,6 +221,11 @@ body {
 .svg:hover {
   fill:rgb(149, 149, 149);
   transform: translate(0, 15px);
+}
+
+.arrow-svg:hover  {
+  fill:rgb(149, 149, 149);
+  cursor: pointer;
 }
 
 #introduction-section {
@@ -340,10 +369,18 @@ body {
 /* icons for each table event */
 .modal-icons {
   display: inline-block;
+  /* padding-right: 2rem; */
+  padding: 0.5rem;
 }
 
 .facebook-icon, .map-icon, .web-icon {
   width: 1rem;
+  margin: 0.2rem;
+  /* padding-top: 1rem; */
+}
+
+.modal-dates {
+  min-width: 50px
 }
 
 tr {
@@ -352,10 +389,25 @@ tr {
 
 /* like div elements to make the slideshow for each month */
 thead {
-  background-color: #888;
+  /* background-color: #888; */
   height: 70vh;
-  width: 100%;
-  overflow: hidden;
+  /* min-width: 100vh; */
+  overflow: auto;
+}
+
+td {
+  background-color: #f0f0f0;
+  padding-left: 0.3rem;
+  font-size: 0.75rem;
+}
+
+#months-td{
+  background-color: transparent;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 0.4rem;
+  border-radius: 0 4rem 4rem 0;
+  width: 110px;
 }
 
 /* slideshow individual arrow buttons */
@@ -363,6 +415,7 @@ thead {
   display: inline-block;
   width: 50px;
   justify-content: space-around;
+  border: none;
 }
 
 /* slideshow container arrow buttons */
@@ -388,7 +441,7 @@ thead {
   justify-content: center;
   margin: auto;
   padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-bottom: 7rem;
   gap: 2.8rem;
 }
 
@@ -455,10 +508,11 @@ thead {
 /* container of text in the cards */
 .text-container {
   padding: 0.5rem 0.6rem;
-  font-size: 0.7rem;
+  font-size: 0.6rem;
   line-height: 0.85rem;
   grid-area: 1 / 2 / 2 / 4;
   min-height: 4.5rem;
+  max-width: 180px;
 }
 
 #bold-text-span {
@@ -494,12 +548,6 @@ iframe {
   max-width: 100%;
 }
 
-#square {
-  height: 30vh;
-  border-radius: 1rem 1rem 0 0;
-  background-color: #dddddd;
-  margin-top: 10rem;
-}
 /* .building-kite-container {
   width: 100%;
   margin: auto;
@@ -527,13 +575,18 @@ iframe {
   border: 0.2rem solid #97bbffa9;
   width: 100%;
   border-radius: 3rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   max-width: 80%;
   word-spacing: 0.3rem;
   line-height: 1.3rem;
   cursor: pointer;
   padding: 0.4rem;
   /* background-color: #fefefe87; */
+}
+
+#events-btn:hover {
+  background-color: white;
+  color: #c1c1c1;
 }
 
 #preparation-section {
@@ -621,9 +674,8 @@ iframe {
   border-radius: 0px;
   background: #97bbffa9;
   color: #fff;
-  padding-top: 10px;
   cursor: pointer;
-  outline: none;
+  border: none;
 }
 
 .search-btn:hover {
@@ -633,14 +685,68 @@ iframe {
 #flex-youtube-weather {
   display: grid;
   grid-template-columns: 1fr;
-grid-template-rows: repeat(2, 1fr);
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-gap: 1rem;
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  gap: 1rem;
 }
 
+#search-btn_weather{
+  outline: none;
+}
 
+/* weather-api */
+#left-part {
+  max-width: 360px;
+  margin: auto;
+}
 
+#footer {
+  height: 25vh;
+  border-radius: 1rem 1rem 0 0;
+  background-color: #dddddd;
+  margin-top: 3rem;
+  padding-top: 5rem;
+  text-align: center;
+  font-size: 1rem;
+  padding-bottom: 10rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+#footer > .row{
+  width:100%;
+  margin:auto;
+  padding:0.6% 0%;
+  color:gray;
+  font-size:0.8em;
+  max-width: 300px;
+  
+  }
+  
+#footer .row a{
+  text-decoration:none;
+  color:gray;
+  transition:0.5s;
+  }
+  
+#footer .row a:hover{
+  color:#fff;
+  }
+  
+#footer .row ul{
+  width:100%;
+  }
+  
+#footer .row ul li{
+  display:inline-block;
+  margin:0px 30px;
+  }
+  
+#footer .row a i{
+  font-size:2em;
+  margin:0% 1%;
+  }
 
 
 
@@ -713,7 +819,7 @@ gap: 1rem;
   }
 
   #intro-para {
-    font-size: 1.3rem;
+    font-size: 1rem;
     max-width: 80%;
     word-spacing: 0.5rem;
     line-height: 2rem;
@@ -860,11 +966,12 @@ gap: 1rem;
   .text-container {
     padding: 1rem 1.2rem;
     line-height: 1.5rem;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
     overflow: hidden;
     min-height: 150px;
     /* make it bigger */
     grid-area: 2 / 1 / 3 / 2;
+    max-width: 300px;
   }
 
   /* container of arrow button svg */
@@ -923,7 +1030,7 @@ gap: 1rem;
     /* background-color: #000; */
     border: 0.2rem solid #97bbffa9;
     border-radius: 3rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
     max-width: 80%;
     word-spacing: 0.3rem;
     line-height: 1.8rem;
@@ -938,17 +1045,84 @@ gap: 1rem;
   }
 
   tr {
-    font-size: 16px;
+    font-size: 0.9rem;
   }
+
+  /* icons for each table event */
+.modal-icons {
+  display: inline-block;
+  /* padding-right: 2rem; */
+  padding: 0.5rem;
+}
+
+.facebook-icon, .map-icon, .web-icon {
+  width: 1rem;
+  margin: 0.4rem;
+  /* padding-top: 1rem; */
+}
+
+.modal-dates {
+  min-width: 50px
+}
+
+tr {
+  font-size: 14px;
+}
+
+/* like div elements to make the slideshow for each month */
+thead {
+  /* background-color: #888; */
+  height: 70vh;
+  /* min-width: 100vh; */
+  overflow: auto;
+}
+
+td {
+  background-color: #f0f0f0;
+  padding-left: 0.3rem;
+}
+
+#months-td{
+  /* background-color: rgb(255, 151, 255); */
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.6rem;
+  border-radius: 0 4rem 4rem 0;
+  width: 150px;
+}
 
   #flex-youtube-weather {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  gap: 6%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    gap: 6%;
   }
+
+  #left-part {
+    max-width: 430px;
+    margin: auto;
+  }
+
+  #footer {
+    height: 35vh;
+    border-radius: 1rem 1rem 0 0;
+    background-color: #dddddd;
+    margin-top: 3rem;
+    padding-top: 5rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  #footer > .row{
+    width:100%;
+    margin:auto;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    max-width: 900px;
+    }
 }
 
 
@@ -981,7 +1155,7 @@ gap: 1rem;
   }
 
   #intro-para {
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     max-width: 80%;
     word-spacing: 0.3rem;
     line-height: 1.8rem;
@@ -1008,6 +1182,57 @@ gap: 1rem;
     top: 190rem;
   }
 
+  thead {
+    max-height: 60vh;
+  }
+
+  tr {
+    font-size: 2rem;
+  }
+
+  /* icons for each table event */
+.modal-icons {
+  display: inline-block;
+  /* padding-right: 2rem; */
+  padding: 0.5rem;
+}
+
+.facebook-icon, .map-icon, .web-icon {
+  width: 1rem;
+  margin: 0.4rem;
+  /* padding-top: 1rem; */
+}
+
+.modal-dates {
+  min-width: 50px
+}
+
+tr {
+  font-size: 20px;
+}
+
+/* like div elements to make the slideshow for each month */
+thead {
+  /* background-color: #888; */
+  height: 70vh;
+  /* min-width: 100vh; */
+  overflow: auto;
+}
+
+td {
+  background-color: #f0f0f0;
+  padding-left: 0.3rem;
+  font-size: 1.2rem;
+}
+
+#months-td{
+  /* background-color: rgb(255, 151, 255); */
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 0.6rem;
+  border-radius: 0 4rem 4rem 0;
+  width: 200px;
+}
 }
 
 /*BIG desktop version 4k*/ 
